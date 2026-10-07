@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>भारत योजना | Government Schemes India</title>
+
+<meta name="description"
+content="भारत की सरकारी योजनाओं को आसान हिंदी में खोजें और समझें।">
+
+<style>
+
+:root{
+  --primary:#ff6b00;
+  --primary2:#ff8c32;
+  --blue:#123c69;
+  --text:#172033;
+  --muted:#687386;
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --border:#e8ebf1;
+  --success:#16834a;
+  --shadow:0 15px 40px rgba(20,35,60,.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:
+  system-ui,
+  -apple-system,
+  "Noto Sans Devanagari",
+  "Segoe UI",
+  sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:.3s;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  background:
+  radial-gradient(circle at 15% 20%,rgba(255,255,255,.18),transparent 30%),
+  linear-gradient(135deg,#ff6500,#ff922e);
+  color:white;
+  padding-bottom:65px;
+  position:relative;
+  overflow:hidden;
+}
+
+nav{
+  width:min(1180px,94%);
+  margin:auto;
+  padding:18px 0;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:20px;
+  font-weight:800;
+}
+
+.logo-icon{
+  width:40px;
+  height:40px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:white;
+  color:#ff6500;
+  font-size:22px;
+}
+
+.nav-right{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+.nav-btn{
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.25);
+  color:white;
+  padding:9px 13px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+.hero{
+  width:min(950px,94%);
+  margin:40px auto 0;
+  text-align:center;
+}
+
+.hero-badge{
+  display:inline-block;
+  padding:7px 13px;
+  background:rgba(255,255,255,.16);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:30px;
+  font-size:13px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:clamp(32px,6vw,58px);
+  line-height:1.12;
+  margin-bottom:16px;
+  letter-spacing:-1px;
+}
+
+.hero h1 span{
+  color:#fff4df;
+}
+
+.hero p{
+  max-width:680px;
+  margin:auto;
+  line-height:1.7;
+  opacity:.95;
+  font-size:16px;
+}
+
+/* ================= MAIN ================= */
+
+.container{
+  width:min(1180px,94%);
+  margin:-35px auto 50px;
+  position:relative;
+}
+
+/* SEARCH */
+
+.search-panel{
+  background:var(--card);
+  border-radius:22px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+
+.search-row{
+  display:flex;
+  gap:10px;
+}
+
+.search-input{
+  flex:1;
+  position:relative;
+}
+
+.search-input input{
+  width:100%;
+  padding:16px 18px 16px 48px;
+  border:1px solid var(--border);
+  border-radius:13px;
+  outline:none;
+  font-size:15px;
+  background:var(--card);
+  color:var(--text);
+}
+
+.search-icon{
+  position:absolute;
+  left:17px;
+  top:14px;
+  font-size:19px;
+}
+
+.search-btn{
+  background:var(--primary);
+  color:white;
+  border:0;
+  border-radius:13px;
+  padding:0 24px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.search-btn:hover{
+  background:#e95d00;
+}
+
+/* CATEGORIES */
+
+.categories{
+  display:flex;
+  gap:9px;
+  overflow-x:auto;
+  padding-top:15px;
+  scrollbar-width:none;
+}
+
+.categories::-webkit-scrollbar{
+  display:none;
+}
+
+.category{
+  white-space:nowrap;
+  padding:10px 14px;
+  border:1px solid var(--border);
+  border-radius:30px;
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  transition:.2s;
+  font-size:14px;
+  font-weight:600;
+}
+
+.category:hover,
+.category.active{
+  background:#fff2e8;
+  color:var(--primary);
+  border-color:#ffc99f;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin:25px 0;
+}
+
+.stat{
+  background:var(--card);
+  padding:20px;
+  border:1px solid var(--border);
+  border-radius:17px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.stat-icon{
+  width:45px;
+  height:45px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  background:#fff2e8;
+  font-size:21px;
+}
+
+.stat strong{
+  display:block;
+  font-size:20px;
+}
+
+.stat span{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* ================= SECTION ================= */
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  margin:32px 0 15px;
+}
+
+.section-head h2{
+  font-size:24px;
+}
+
+.section-head p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ================= CARDS ================= */
+
+.schemes{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:17px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 7px 25px rgba(20,35,60,.045);
+  transition:.25s;
+  animation:fade .35s ease;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+}
+
+.card-top{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  align-items:start;
+}
+
+.scheme-icon{
+  width:50px;
+  height:50px;
+  border-radius:15px;
+  display:grid;
+  place-items:center;
+  background:#fff3e8;
+  font-size:24px;
+}
+
+.tag{
+  background:#eef7f2;
+  color:var(--success);
+  padding:6px 9px;
+  border-radius:20px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.card h3{
+  margin:15px 0 8px;
+  font-size:18px;
+}
+
+.card p{
+  color:var(--muted);
+  line-height:1.65;
+  font-size:14px;
+}
+
+.card-bottom{
+  margin-top:17px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.details-btn{
+  color:var(--primary);
+  background:transparent;
+  border:0;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* ================= AI ================= */
+
+.ai-section{
+  margin-top:35px;
+  background:
+  radial-gradient(circle at 80% 10%,rgba(255,255,255,.12),transparent 30%),
+  linear-gradient(135deg,#14243d,#203f68);
+  color:white;
+  border-radius:24px;
+  padding:30px;
+  overflow:hidden;
+}
+
+.ai-header{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:10px;
+}
+
+.ai-logo{
+  width:50px;
+  height:50px;
+  border-radius:15px;
+  background:rgba(255,255,255,.13);
+  display:grid;
+  place-items:center;
+  font-size:25px;
+}
+
+.ai-section h2{
+  font-size:25px;
+}
+
+.ai-section .sub{
+  color:#d9e2ef;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+
+.ai-row{
+  display:flex;
+  gap:10px;
+}
+
+.ai-row input{
+  flex:1;
+  padding:16px;
+  border-radius:13px;
+  border:0;
+  outline:none;
+  font-size:15px;
+}
+
+.ai-btn{
+  background:#ff7a00;
+  color:white;
+  border:0;
+  border-radius:13px;
+  padding:0 22px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.ai-result{
+  margin-top:18px;
+  background:white;
+  color:#172033;
+  padding:20px;
+  border-radius:16px;
+  line-height:1.8;
+  white-space:pre-wrap;
+  display:none;
+}
+
+.loading{
+  display:none;
+  margin-top:14px;
+  color:#dce7f7;
+}
+
+/* ================= NOTICE ================= */
+
+.notice{
+  margin-top:20px;
+  background:#fff8e8;
+  border:1px solid #ffe1a7;
+  padding:17px;
+  border-radius:15px;
+  color:#654b18;
+  line-height:1.7;
+  font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  background:#101a2b;
+  color:#bdc7d8;
+  padding:35px 20px;
+  text-align:center;
+}
+
+footer h3{
+  color:white;
+  margin-bottom:7px;
+}
+
+footer a{
+  color:#ffad6d;
+  text-decoration:none;
+}
+
+.footer-links{
+  margin-top:14px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  font-size:13px;
+}
+
+/* ================= MODAL ================= */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.55);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:999;
+}
+
+.modal-box{
+  background:var(--card);
+  width:min(600px,100%);
+  max-height:85vh;
+  overflow:auto;
+  border-radius:22px;
+  padding:25px;
+  position:relative;
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:12px;
+  width:35px;
+  height:35px;
+  border:0;
+  border-radius:50%;
+  cursor:pointer;
+  background:#f0f2f5;
+  font-size:18px;
+}
+
+.modal-box h2{
+  margin-bottom:10px;
+}
+
+.modal-box p{
+  color:var(--muted);
+  line-height:1.8;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fade{
+  from{
+    opacity:0;
+    transform:translateY(7px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark{
+  --bg:#0c1422;
+  --card:#131f31;
+  --text:#f2f5f9;
+  --muted:#a9b4c5;
+  --border:#26354a;
+  --shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+body.dark .category:hover,
+body.dark .category.active{
+  background:#302317;
+  border-color:#70431e;
+}
+
+body.dark .scheme-icon,
+body.dark .stat-icon{
+  background:#302317;
+}
+
+body.dark .notice{
+  background:#292316;
+  color:#e9d59d;
+  border-color:#59481e;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+  nav{
+    padding:14px 0;
+  }
+
+  .logo{
+    font-size:17px;
+  }
+
+  .hero{
+    margin-top:30px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .search-row,
+  .ai-row{
+    flex-direction:column;
+  }
+
+  .search-btn,
+  .ai-btn{
+    padding:15px;
+  }
+
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .section-head{
+    align-items:start;
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .ai-section{
+    padding:22px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+  <nav>
+
+    <div class="logo">
+      <div class="logo-icon">🇮🇳</div>
+      <span>भारत योजना</span>
+    </div>
+
+    <div class="nav-right">
+
+      <button class="nav-btn" onclick="toggleDark()">
+        🌙
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <div class="hero">
+
+    <div class="hero-badge">
+      🇮🇳 सरकारी योजनाओं की जानकारी
+    </div>
+
+    <h1>
+      सही योजना खोजें,<br>
+      <span>आसान हिंदी में समझें</span>
+    </h1>
+
+    <p>
+      केंद्र और राज्य सरकार की योजनाओं के बारे में
+      जानकारी खोजें और AI की मदद से अपनी जरूरत के
+      अनुसार योजना समझें।
+    </p>
+
+  </div>
+
+</header>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="container">
+
+
+  <!-- SEARCH -->
+
+  <section class="search-panel">
+
+    <div class="search-row">
+
+      <div class="search-input">
+
+        <span class="search-icon">🔍</span>
+
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="योजना खोजें — जैसे किसान, छात्र, महिला..."
+          oninput="searchSchemes()"
+        >
+
+      </div>
+
+      <button
+        class="search-btn"
+        onclick="searchSchemes()">
+        खोजें
+      </button>
+
+    </div>
+
+
+    <div class="categories">
+
+      <div
+        class="category active"
+        onclick="filterCategory('सभी',this)">
+        🏠 सभी
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('शिक्षा',this)">
+        🎓 शिक्षा
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('कृषि',this)">
+        🌾 कृषि
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('महिला',this)">
+        👩 महिला
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('स्वास्थ्य',this)">
+        🏥 स्वास्थ्य
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('रोजगार',this)">
+        💼 रोजगार
+      </div>
+
+      <div
+        class="category"
+        onclick="filterCategory('वित्त',this)">
+        💰 वित्त
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STATS -->
+
+  <section class="stats">
+
+    <div class="stat">
+
+      <div class="stat-icon">🇮🇳</div>
+
+      <div>
+        <strong>भारत</strong>
+        <span>सरकारी योजनाएँ</span>
+      </div>
+
+    </div>
+
+
+    <div class="stat">
+
+      <div class="stat-icon">🔎</div>
+
+      <div>
+        <strong id="schemeCount">0</strong>
+        <span>दिखाई जा रही योजनाएँ</span>
+      </div>
+
+    </div>
+
+
+    <div class="stat">
+
+      <div class="stat-icon">🤖</div>
+
+      <div>
+        <strong>AI</strong>
+        <span>हिंदी सहायता</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SCHEMES -->
+
+  <div class="section-head">
+
+    <div>
+      <h2>लोकप्रिय योजनाएँ</h2>
+      <p>शुरुआत के लिए कुछ प्रमुख योजनाएँ</p>
+    </div>
+
+  </div>
+
+
+  <div
+    id="schemeList"
+    class="schemes">
+  </div>
+
+
+  <!-- AI -->
+
+  <section class="ai-section">
+
+    <div class="ai-header">
+
+      <div class="ai-logo">🤖</div>
+
+      <div>
+        <h2>AI योजना सहायक</h2>
+      </div>
+
+    </div>
+
+    <p class="sub">
+      अपनी स्थिति या जरूरत लिखें। उदाहरण:
+      “मैं 10वीं का छात्र हूँ, मेरे लिए कौन सी छात्रवृत्ति
+      योजना हो सकती है?”
+    </p>
+
+
+    <div class="ai-row">
+
+      <input
+        id="aiQuestion"
+        type="text"
+        placeholder="अपना सवाल यहाँ लिखें..."
+      >
+
+      <button
+        class="ai-btn"
+        onclick="askAI()">
+        ✨ AI से पूछें
+      </button>
+
+    </div>
+
+
+    <div
+      id="loading"
+      class="loading">
+      ⏳ AI जवाब तैयार कर रहा है...
+    </div>
+
+
+    <div
+      id="aiResult"
+      class="ai-result">
+    </div>
+
+  </section>
+
+
+  <!-- NOTICE -->
+
+  <div class="notice">
+
+    ⚠️ <b>महत्वपूर्ण सूचना:</b>
+    यह वेबसाइट जानकारी समझने में सहायता करती है।
+    योजना की पात्रता, लाभ, दस्तावेज और आवेदन की अंतिम
+    जानकारी के लिए संबंधित सरकारी वेबसाइट पर सत्यापन करें।
+
+  </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <h3>🇮🇳 भारत योजना</h3>
+
+  <p>
+    सरकारी योजनाओं की जानकारी आसान हिंदी में
+  </p>
+
+  <div class="footer-links">
+
+    <a
+      href="https://www.myscheme.gov.in/hi"
+      target="_blank"
+      rel="noopener">
+      myScheme
+    </a>
+
+    <a
+      href="https://www.india.gov.in/"
+      target="_blank"
+      rel="noopener">
+      India.gov.in
+    </a>
+
+  </div>
+
+  <p style="margin-top:18px;font-size:12px;">
+    © 2026 भारत योजना • जानकारी के लिए official sources देखें
+  </p>
+
+</footer>
+
+
+<!-- ================= MODAL ================= -->
+
+<div
+  id="modal"
+  class="modal"
+  onclick="closeModal(event)">
+
+  <div
+    class="modal-box"
+    onclick="event.stopPropagation()">
+
+    <button
+      class="close"
+      onclick="closeModal()">
+      ×
+    </button>
+
+    <h2 id="modalTitle"></h2>
+
+    <p id="modalText"></p>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/*
+===========================================================
+GROQ API SETTINGS
+===========================================================
+
+IMPORTANT:
+
+GitHub Pages पर API key डालने से key public हो जाएगी।
+
+Testing के लिए:
+नीचे अपनी Groq API key डाल सकते हैं।
+
+Production के लिए:
+GitHub Pages + Cloudflare Worker जैसे backend proxy
+का इस्तेमाल करें।
+*/
+
+const GROQ_API_KEY =
+"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";
+
+
+/*
+===========================================================
+LATEST MODEL
+===========================================================
+*/
+
+const GROQ_MODEL =
+"openai/gpt-oss-120b";
+
+
+/*
+===========================================================
+SCHEMES DATA
+===========================================================
+*/
+
+const schemes = [
+
+  {
+    name:"प्रधानमंत्री किसान सम्मान निधि",
+    category:"कृषि",
+    icon:"🌾",
+    description:
+    "पात्र किसानों को कृषि संबंधी जरूरतों के लिए आर्थिक सहायता प्रदान करने वाली केंद्र सरकार की प्रमुख योजना।"
+  },
+
+  {
+    name:"प्रधानमंत्री जन धन योजना",
+    category:"वित्त",
+    icon:"🏦",
+    description:
+    "लोगों को बैंकिंग और वित्तीय सेवाओं से जोड़ने के उद्देश्य से शुरू की गई महत्वपूर्ण योजना।"
+  },
+
+  {
+    name:"आयुष्मान भारत",
+    category:"स्वास्थ्य",
+    icon:"🏥",
+    description:
+    "पात्र लाभार्थियों को स्वास्थ्य सेवाओं और उपचार से जुड़ी सहायता उपलब्ध कराने की प्रमुख सरकारी पहल।"
+  },
+
+  {
+    name:"बेटी बचाओ बेटी पढ़ाओ",
+    category:"महिला",
+    icon:"👧",
+    description:
+    "बालिकाओं की सुरक्षा, शिक्षा और सशक्तिकरण को बढ़ावा देने की सरकारी पहल।"
+  },
+
+  {
+    name:"प्रधानमंत्री कौशल विकास योजना",
+    category:"रोजगार",
+    icon:"💼",
+    description:
+    "युवाओं को कौशल प्रशिक्षण देकर रोजगार योग्य बनाने के उद्देश्य से संचालित योजना।"
+  },
+
+  {
+    name:"राष्ट्रीय छात्रवृत्ति योजनाएँ",
+    category:"शिक्षा",
+    icon:"🎓",
+    description:
+    "पात्र विद्यार्थियों के लिए विभिन्न छात्रवृत्ति योजनाओं और शैक्षणिक सहायता की जानकारी।"
+  },
+
+  {
+    name:"प्रधानमंत्री आवास योजना",
+    category:"सामाजिक सुरक्षा",
+    icon:"🏠",
+    description:
+    "पात्र परिवारों को आवास से संबंधित सहायता उपलब्ध कराने वाली सरकारी पहल।"
+  },
+
+  {
+    name:"प्रधानमंत्री उज्ज्वला योजना",
+    category:"महिला",
+    icon:"🔥",
+    description:
+    "पात्र परिवारों को स्वच्छ cooking fuel से जोड़ने के उद्देश्य से शुरू की गई योजना।"
+  }
+
+];
+
+
+let currentCategory = "सभी";
+
+
+/*
+===========================================================
+DISPLAY SCHEMES
+===========================================================
+*/
+
+function showSchemes(list){
+
+  const box =
+    document.getElementById("schemeList");
+
+  document.getElementById("schemeCount")
+    .textContent = list.length;
+
+
+  if(!list.length){
+
+    box.innerHTML = `
+
+      <div class="card">
+
+        <h3>😕 कोई योजना नहीं मिली</h3>
+
+        <p>
+          कृपया दूसरा keyword इस्तेमाल करके खोजें।
+        </p>
+
+      </div>
+
+    `;
+
+    return;
+  }
+
+
+  box.innerHTML = list.map((scheme,index)=>`
+
+    <article class="card">
+
+      <div class="card-top">
+
+        <div class="scheme-icon">
+          ${scheme.icon}
+        </div>
+
+        <span class="tag">
+          ${scheme.category}
+        </span>
+
+      </div>
+
+
+      <h3>
+        ${scheme.name}
+      </h3>
+
+
+      <p>
+        ${scheme.description}
+      </p>
+
+
+      <div class="card-bottom">
+
+        <small>
+          🇮🇳 सरकारी योजना
+        </small>
+
+        <button
+          class="details-btn"
+          onclick="openDetails(${index})">
+          विवरण →
+        </button>
+
+      </div>
+
+    </article>
+
+  `).join("");
+
+}
+
+
+/*
+===========================================================
+SEARCH
+===========================================================
+*/
+
+function searchSchemes(){
+
+  const query =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+
+  let result = schemes.filter(scheme=>{
+
+    const text =
+      scheme.name +
+      " " +
+      scheme.category +
+      " " +
+      scheme.description;
+
+    return text.toLowerCase()
+      .includes(query);
+
+  });
+
+
+  if(currentCategory !== "सभी"){
+
+    result =
+      result.filter(
+        scheme =>
+        scheme.category === currentCategory
+      );
+
+  }
+
+
+  showSchemes(result);
+
+}
+
+
+/*
+===========================================================
+CATEGORY
+===========================================================
+*/
+
+function filterCategory(category,element){
+
+  currentCategory = category;
+
+
+  document
+    .querySelectorAll(".category")
+    .forEach(item=>{
+      item.classList.remove("active");
+    });
+
+
+  element.classList.add("active");
+
+
+  searchSchemes();
+
+}
+
+
+/*
+===========================================================
+DETAILS MODAL
+===========================================================
+*/
+
+function openDetails(index){
+
+  const scheme = schemes[index];
+
+  document.getElementById("modalTitle")
+    .textContent = scheme.name;
+
+  document.getElementById("modalText")
+    .textContent =
+      "श्रेणी: " + scheme.category +
+      "\\n\\n" +
+      scheme.description +
+      "\\n\\n" +
+      "पात्रता और आवेदन की वर्तमान जानकारी के लिए संबंधित official government portal पर जरूर जाँच करें।";
+
+  document.getElementById("modal")
+    .style.display = "flex";
+
+}
+
+
+function closeModal(){
+
+  document.getElementById("modal")
+    .style.display = "none";
+
+}
+
+
+/*
+===========================================================
+DARK MODE
+===========================================================
+*/
+
+function toggleDark(){
+
+  document.body.classList.toggle("dark");
+
+  const enabled =
+    document.body.classList.contains("dark");
+
+  localStorage.setItem(
+    "darkMode",
+    enabled ? "1" : "0"
+  );
+
+}
+
+
+/*
+===========================================================
+RESTORE DARK MODE
+===========================================================
+*/
+
+if(localStorage.getItem("darkMode")==="1"){
+
+  document.body.classList.add("dark");
+
+}
+
+
+/*
+===========================================================
+GROQ AI
+===========================================================
